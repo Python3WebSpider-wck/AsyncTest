@@ -1,5 +1,6 @@
 import asyncio
 
+
 async def execute(x):
     print('Number:', x)
     return x

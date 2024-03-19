@@ -1,5 +1,6 @@
 import aiohttp
 import asyncio
+import time
 
 
 async def fetch(session, url):
@@ -15,4 +16,8 @@ async def main():
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+    # Python3.7 及其之后版本，不用显式声明事件循环
+    # asyncio.run(main())
+    # time.sleep(10)

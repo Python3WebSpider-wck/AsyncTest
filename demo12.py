@@ -8,7 +8,6 @@ def test(number):
     
     async def get(url):
         session = aiohttp.ClientSession()
-        
         response = await session.get(url)
         await response.text()
         await session.close()
@@ -24,6 +23,7 @@ def test(number):
     
     end = time.time()
     print('Number:', number, 'Cost time:', end - start)
+
 
 for number in [1, 3, 5, 10, 15, 30, 50, 75, 100, 200, 500]:
     test(number)

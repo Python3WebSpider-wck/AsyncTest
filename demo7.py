@@ -1,6 +1,7 @@
 import asyncio
 import requests
 
+
 async def request():
     url = 'https://www.baidu.com'
     status = requests.get(url)
